@@ -1,0 +1,32 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9a95ef8274ed46fea775fb397fc4bf1e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.new_PC
+Compiling module xil_defaultlib.instruction_mem
+Compiling module xil_defaultlib.inst_stage
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.in_register
+Compiling module xil_defaultlib.imm_sel_mux
+Compiling module xil_defaultlib.bit_extend
+Compiling module xil_defaultlib.decode_stage
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ALU_mux
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.nextPC
+Compiling module xil_defaultlib.ALU_stage
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem_stage
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.wb_stage
+Compiling module xil_defaultlib.main
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
