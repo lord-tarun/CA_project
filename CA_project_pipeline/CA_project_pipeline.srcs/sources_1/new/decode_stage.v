@@ -77,24 +77,33 @@ begin
 case(ins_code[6:2])
 5'b01100:begin // Register type
 			alusrc=1'b0;
-			memtoreg = 0; 
+			memtoreg = 1'b0; 
 			mem_read=1'b0;
 			regwrite=1'b1; 
-			mem_write=1'b0;branch=1'b0;
-			alu_ctrl=ins_code[30]?3'b001:3'b000; imm_sel = 2'bxx;
+			mem_write=1'b0;
+			branch=1'b0;
+			imm_sel = 2'bxx;
+            case(ins_code[14:12])
+                3'b001: alu_ctrl = 3'b010;
+                3'b101: alu_ctrl = 3'b011;
+                3'b111: alu_ctrl = 3'b100;
+                3'b110: alu_ctrl = 3'b101; 
+			    3'b000: alu_ctrl=ins_code[30]?3'b001:3'b000; 
+			endcase
 			end
 5'b00100:begin // Immediate 
-			alusrc=1'b1; memtoreg = 0; mem_read=1'b0; regwrite=1'b1; mem_write=1'b0;branch=1'b0;imm_sel = 2'b00;
-			case({ins_code[14],ins_code[12]})
-			2'b00:alu_ctrl=3'b000;
-			2'b01:alu_ctrl=3'b010;
-			2'b11:alu_ctrl=ins_code[30]?3'b100:3'b011;
-			default:alu_ctrl=3'bx;
-			endcase
+			alusrc=1'b1;
+			memtoreg = 1'b0;
+			mem_read=1'b0; 
+			regwrite=1'b1; 
+			mem_write=1'b0;
+			branch=1'b0;
+			imm_sel = 2'b00;
+	        alu_ctrl = 3'b000; // As only addi needs to be executed
 			end
 5'b00000:begin // Load
 			alusrc=1'b1; 
-			memtoreg = 1; 
+			memtoreg = 1'b1; 
 			mem_read=1'b1; 
 			regwrite=1'b1; 
 			mem_write=1'b0;
@@ -104,7 +113,7 @@ case(ins_code[6:2])
 			end
 5'b01000:begin // Store
 			alusrc=1'b1;
-			memtoreg = 1; 
+			memtoreg = 1'b0; 
 			mem_read=1'b0; 
 			regwrite=1'b0; 
 			mem_write=1'b1;
@@ -120,7 +129,7 @@ case(ins_code[6:2])
 			mem_write=1'b0; 
 			alu_ctrl=3'b001; 
 			imm_sel = 2'b10;
-			branch=1;
+			branch=1'b1;
 			end
 endcase
 end

@@ -5,19 +5,6 @@ output [31:0] instruction_code
 , input [31:0] branched_PC , input pcsrc
 );
 wire [31:0] internal_PC;
-/*reg [31:0] internal_PC;
-
-always @ (posedge clk)
-begin
-    //normal_PC<=PC;
-        if (reset == 1)
-            internal_PC =0;
-        else
-        begin
-            internal_PC = pcsrc ? branched_PC: internal_PC+4;
-            //PC <= normal_PC;
-        end
-    end*/
 
 new_PC p1(clk,reset,pcsrc, branched_PC,internal_PC);
 
@@ -28,8 +15,6 @@ endmodule
 
 module new_PC(input clk, input reset,input pcsrc, input [31:0] branched_PC, output reg [31:0] internal_PC);
 
-//reg [31:0] internal_PC;
-
 always @ (posedge clk)
 begin
         if (reset == 1)
@@ -39,7 +24,6 @@ begin
             internal_PC = branched_PC; 
             else
             internal_PC = internal_PC+4;
-            //PC <= normal_PC;
 end
 
 endmodule
