@@ -28,7 +28,7 @@ main m1(clk, reset);
 initial begin
 clk = 0;
 forever #5 clk <= ~clk;
-#20 $finish;
+#100 $finish;
 end
 
 initial begin

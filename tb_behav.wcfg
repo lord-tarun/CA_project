@@ -11,190 +11,99 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="83213fs"></ZoomStartTime>
-      <ZoomEndTime time="153937fs"></ZoomEndTime>
-      <Cursor1Time time="108542fs"></Cursor1Time>
+      <ZoomStartTime time="116667fs"></ZoomStartTime>
+      <ZoomEndTime time="216667fs"></ZoomEndTime>
+      <Cursor1Time time="177706fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="229"></NameColumnWidth>
-      <ValueColumnWidth column_width="182"></ValueColumnWidth>
+      <ValueColumnWidth column_width="158"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject fp_name="/tb/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/reset" type="logic">
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/tb/m1/m1/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/m1/i1/PC" type="array">
-      <obj_property name="ElementShortName">PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   <wvobject fp_name="/tb/m1/m1/address" type="array">
+      <obj_property name="ElementShortName">address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">address[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/m1/id1/id_PC" type="array">
-      <obj_property name="ElementShortName">id_PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">id_PC[31:0]</obj_property>
+   <wvobject fp_name="/tb/m1/m1/write_data" type="array">
+      <obj_property name="ElementShortName">write_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/m1/d1/out_reg1" type="array">
-      <obj_property name="ElementShortName">out_reg1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out_reg1[31:0]</obj_property>
+   <wvobject fp_name="/tb/m1/m1/memwrite" type="logic">
+      <obj_property name="ElementShortName">memwrite</obj_property>
+      <obj_property name="ObjectShortName">memwrite</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/m1/d1/out_reg2" type="array">
-      <obj_property name="ElementShortName">out_reg2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out_reg2[31:0]</obj_property>
+   <wvobject fp_name="/tb/m1/m1/memread" type="logic">
+      <obj_property name="ElementShortName">memread</obj_property>
+      <obj_property name="ObjectShortName">memread</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/m1/d1/imm_data" type="array">
-      <obj_property name="ElementShortName">imm_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">imm_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/m1/idex/rwrite" type="array">
-      <obj_property name="ElementShortName">rwrite[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rwrite[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/m1/a1/alu_out" type="array">
-      <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
+   <wvobject fp_name="/tb/m1/m1/read_data" type="array">
+      <obj_property name="ElementShortName">read_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/tb/m1/m1/dm" type="array">
       <obj_property name="ElementShortName">dm[60:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">dm[60:0][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/m1/w1/writetoreg" type="array">
-      <obj_property name="ElementShortName">writetoreg[31:0]</obj_property>
-      <obj_property name="ObjectShortName">writetoreg[31:0]</obj_property>
+   <wvobject fp_name="/tb/m1/a1/read_reg1" type="array">
+      <obj_property name="ElementShortName">read_reg1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_reg1[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/m1/d1/i1/registers" type="array">
-      <obj_property name="ElementShortName">registers[31:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">registers[31:0][31:0]</obj_property>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[31]" type="array">
-         <obj_property name="ElementShortName">[31][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[31][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[30]" type="array">
-         <obj_property name="ElementShortName">[30][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[30][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[29]" type="array">
-         <obj_property name="ElementShortName">[29][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[29][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[28]" type="array">
-         <obj_property name="ElementShortName">[28][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[28][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[27]" type="array">
-         <obj_property name="ElementShortName">[27][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[27][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[26]" type="array">
-         <obj_property name="ElementShortName">[26][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[26][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[25]" type="array">
-         <obj_property name="ElementShortName">[25][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[25][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[24]" type="array">
-         <obj_property name="ElementShortName">[24][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[24][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[23]" type="array">
-         <obj_property name="ElementShortName">[23][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[23][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[22]" type="array">
-         <obj_property name="ElementShortName">[22][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[22][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[21]" type="array">
-         <obj_property name="ElementShortName">[21][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[21][31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[20]" type="array">
-         <obj_property name="ElementShortName">[20][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[20][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[19]" type="array">
-         <obj_property name="ElementShortName">[19][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[19][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[18]" type="array">
-         <obj_property name="ElementShortName">[18][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[18][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[17]" type="array">
-         <obj_property name="ElementShortName">[17][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[17][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[16]" type="array">
-         <obj_property name="ElementShortName">[16][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[16][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[15]" type="array">
-         <obj_property name="ElementShortName">[15][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[15][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[14]" type="array">
-         <obj_property name="ElementShortName">[14][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[14][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[13]" type="array">
-         <obj_property name="ElementShortName">[13][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[13][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[12]" type="array">
-         <obj_property name="ElementShortName">[12][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[12][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[11]" type="array">
-         <obj_property name="ElementShortName">[11][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[11][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[10]" type="array">
-         <obj_property name="ElementShortName">[10][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[10][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[9]" type="array">
-         <obj_property name="ElementShortName">[9][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[9][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[8]" type="array">
-         <obj_property name="ElementShortName">[8][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[8][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[7]" type="array">
-         <obj_property name="ElementShortName">[7][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[6]" type="array">
-         <obj_property name="ElementShortName">[6][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[5]" type="array">
-         <obj_property name="ElementShortName">[5][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[4]" type="array">
-         <obj_property name="ElementShortName">[4][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[3]" type="array">
-         <obj_property name="ElementShortName">[3][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[2]" type="array">
-         <obj_property name="ElementShortName">[2][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[1]" type="array">
-         <obj_property name="ElementShortName">[1][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/tb/m1/d1/i1/registers[0]" type="array">
-         <obj_property name="ElementShortName">[0][31:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][31:0]</obj_property>
-      </wvobject>
+   <wvobject fp_name="/tb/m1/a1/read_reg2" type="array">
+      <obj_property name="ElementShortName">read_reg2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_reg2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/m1/a1/imm_data" type="array">
+      <obj_property name="ElementShortName">imm_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/m1/a1/alu_src" type="logic">
+      <obj_property name="ElementShortName">alu_src</obj_property>
+      <obj_property name="ObjectShortName">alu_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/m1/a1/alu_ctrl" type="array">
+      <obj_property name="ElementShortName">alu_ctrl[2:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_ctrl[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/m1/a1/zero_flag" type="logic">
+      <obj_property name="ElementShortName">zero_flag</obj_property>
+      <obj_property name="ObjectShortName">zero_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/m1/alu_data1" type="array">
+      <obj_property name="ElementShortName">alu_data1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_data1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/m1/alu_data2" type="array">
+      <obj_property name="ElementShortName">alu_data2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_data2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/m1/sel1" type="array">
+      <obj_property name="ElementShortName">sel1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/m1/sel2" type="array">
+      <obj_property name="ElementShortName">sel2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/m1/a1/alu_out" type="array">
+      <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
    </wvobject>
 </wave_config>

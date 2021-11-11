@@ -18,6 +18,7 @@ Compiling module xil_defaultlib.imm_sel_mux
 Compiling module xil_defaultlib.bit_extend
 Compiling module xil_defaultlib.decode_stage
 Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.forwarding_mux
 Compiling module xil_defaultlib.ALU_mux
 Compiling module xil_defaultlib.ALU
 Compiling module xil_defaultlib.nextPC
@@ -26,6 +27,7 @@ Compiling module xil_defaultlib.ex_mem
 Compiling module xil_defaultlib.mem_stage
 Compiling module xil_defaultlib.mem_wb
 Compiling module xil_defaultlib.wb_stage
+Compiling module xil_defaultlib.hazard_detect
 Compiling module xil_defaultlib.main
 Compiling module xil_defaultlib.tb
 Compiling module xil_defaultlib.glbl
