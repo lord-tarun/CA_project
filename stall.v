@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 29.10.2021 19:45:22
+// Create Date: 04.12.2021 11:46:38
 // Design Name: 
-// Module Name: tb
+// Module Name: stall
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,19 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb();
-reg clk, reset;
-
-main m1(clk, reset);
-
-initial begin
-clk = 0;
-forever #5 clk <= ~clk;
-#100 $finish;
-end
-
-initial begin
-reset <= 1;
-#7 reset <=0;
-end
+module stall(input ex_memread,
+ input [4:0] rs1,rs2,rrwrite, 
+ output reg stall_signal, input reset );
+ 
+ always @(*)
+ begin
+ if (reset)
+    stall_signal <= 1'b0;
+ else if (ex_memread &((rrwrite == rs1) | (rrwrite == rs2)))
+    stall_signal <= 1'b1;
+ else
+    stall_signal <= 1'b0;
+ end
 endmodule

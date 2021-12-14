@@ -27,10 +27,39 @@ module if_id(
     output reg [31:0] id_PC,
     output reg [31:0] id_inst_code
     );
+    
+/*    always @(*)
+    begin
+    if (clk & stall_signal)
+        begin
+            id_inst_code <= 32'h00000033;
+            id_PC <= 32'b0;
+        end
+    end*/
+    
+    
     always@(posedge clk)
     begin
-        id_PC<=PC;
-        id_inst_code <= instruction_code; 
-    end
+  //  case (stall_signal)
+   // 1'b0: begin
+            id_PC<=PC;
+            id_inst_code <= instruction_code; 
+     //     end
+/*    1'b1: begin
+            id_inst_code <= 32'h00000033;
+            id_PC <= 32'b0;
+          end*/
+    //endcase
+/*        if (stall_signal)
+            begin
+                id_inst_code <= 32'h00000033;
+                id_PC <= 32'b0;
+            end
+        else*/
+            //begin
+               // id_PC<=PC;
+                //id_inst_code <= instruction_code; 
+            //end
     
+    end
 endmodule

@@ -1,18 +1,24 @@
 `timescale 1ns / 1ps
 
 module ALU_stage(input [31:0] read_reg1, input [31:0] read_reg2, input [31:0] imm_data, 
-input alu_src, input [2:0] alu_ctrl,output[31:0] alu_out // do not comment these signals
-, input [31:0] PC, input branch, output [31:0] branched_PC, output pcsrc);
+input alu_src, input [2:0] alu_ctrl,output[31:0] net_out, // do not comment these signals
+input [31:0] PC, input branch, output [31:0] branched_PC, output pcsrc,
+input mac, input [31:0] dest_reg);
 
-wire [31:0]alu_data2;
+wire [31:0]alu_data2, ALU_reg1, ALU_reg2, alu_out, mac_reg1, mac_reg2, mac_out;
 wire zero_flag;
 
-ALU_mux m1(read_reg2, imm_data, alu_src,alu_data2);
+mac_demux d1(mac,read_reg1, ALU_reg1,mac_reg1);
+mac_demux d2(mac,read_reg2, ALU_reg2,mac_reg2);
 
-ALU a1(read_reg1,alu_data2,alu_ctrl,alu_out,zero_flag );
+ALU_mux m1(ALU_reg2, imm_data, alu_src,alu_data2);
 
-nextPC n1(PC,imm_data, branch, zero_flag, branched_PC, pcsrc
-); 
+mac_unit mac1(mac_reg1, mac_reg2,dest_reg, mac_out);
+ALU a1(ALU_reg1,alu_data2,alu_ctrl,alu_out,zero_flag );
+
+assign net_out = mac ? mac_out : alu_out;
+
+nextPC n1(PC,imm_data, branch, zero_flag, branched_PC, pcsrc); 
 endmodule
 
 
@@ -58,8 +64,31 @@ module nextPC(input [31:0] PC, input [31:0]imm, input branch, input zero_flag, o
 );
 
 wire [31:0] new_imm;
-assign new_imm = imm<<1;
+assign new_imm = imm<<2;
 assign branched_PC = PC+ new_imm;
 // PCSRC = 1, then branched PC, else +4
 assign pcsrc = zero_flag & branch;
+endmodule
+
+module mac_demux(input mac, input [31:0]decode_data, output reg [31:0] ALU_data, output reg [31:0] mac_data);
+always@(*)
+begin
+if (mac)
+    begin
+        mac_data <= decode_data;
+        ALU_data <= 32'b0;
+    end
+else
+    begin
+        mac_data <= 32'b0;
+        ALU_data <= decode_data;
+    end
+end
+endmodule
+
+
+module mac_unit(input [31:0] mac_reg1, mac_reg2, input [31:0] dest_register, output [31:0] mac_out);
+
+assign mac_out = dest_register + (mac_reg1 * mac_reg2);
+
 endmodule

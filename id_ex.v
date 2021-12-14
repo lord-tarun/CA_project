@@ -47,7 +47,15 @@ module id_ex(
    
     // Registers for checking Hazards
     input [4:0] rs1, rs2, rwrite,
-    output reg [4:0] rrs1, rrs2, rrwrite
+    output reg [4:0] rrs1, rrs2, rrwrite,
+    
+    // Registers for MAC instructions
+    input mac, output reg ex_mac,
+    input [31:0] dest_reg, output reg [31:0] ex_dest_reg
+    
+    // Modified when branch checking in decode stage
+    //input [31:0] branched_PC, output reg [31:0] ex_branched_PC,
+    //input pcsr, output reg ex_pcsr
     );
     
     
@@ -67,6 +75,10 @@ module id_ex(
     rrs1 <= rs1;
     rrs2 <= rs2;
     rrwrite <= rwrite;
+    ex_mac <= mac;
+    ex_dest_reg <= dest_reg;
+    //ex_branched_PC <= branched_PC;
+    //ex_pcsr <= pcsr;
     end
     
 endmodule

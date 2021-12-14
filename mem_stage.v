@@ -2,7 +2,7 @@
 
 module mem_stage(input reset, input [31:0] address, input memread, input memwrite,input [31:0] write_data , 
 output reg [31:0] read_data);
-reg [7:0] dm [60:0];
+reg [7:0] dm [40:0];
 always@*
 begin
 if(reset==1)
